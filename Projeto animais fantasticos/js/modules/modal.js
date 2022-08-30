@@ -19,4 +19,3 @@ export default function abrirModal() {
         modal.classList.toggle('ativo');
     })
 }
-
