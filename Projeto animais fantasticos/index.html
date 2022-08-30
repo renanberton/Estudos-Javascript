@@ -10,12 +10,13 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
+  <div class="grid-container">
   <nav class="menu" data-menu="suave">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a href="https://www.origamid.com/">Dev →</a></li>
+      <li id="abrir-modal"><a  href='login.html'>Login</a></li>
     </ul>
   </nav>
   <section class="grid-section animais" data-anime="scroll" id="animais">
@@ -129,6 +130,19 @@
   <footer class="copy">
     <p>Todos os direitos reservados.</p>
   </footer>
+</div>
+  <section class="modal-container">
+    <div class="modal">
+      <button class="fechar">X</button>
+      <form action="">
+        <label for="email">E-mail</label>
+        <input type="text" for="email" id="email">
+        <label for="senha">Senha</label>
+        <input type="password" for="senha" id="senha">
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
   <script type="module" src="js/script.js"></script>  
 </body>
 </html>
