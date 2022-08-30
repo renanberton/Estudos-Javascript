@@ -1,6 +1,6 @@
 let btnLogin = document.getElementById('abrir-modal');
 let modal = document.querySelector('.modal-container');
-let btnFecharModal = document.querySelector('.fechar');
+let btnFecharModal = document.querySelector('.modal .fechar');
 
 export default function abrirModal() {
     /* Botão do login, que abre o modal */
@@ -8,12 +8,15 @@ export default function abrirModal() {
         modal.classList.toggle('ativo');
         e.preventDefault();
     })
+
     /* Botão 'x' que fecha o modal */
-    btnFecharModal.addEventListener('click', () => {
-        modal.classList.toggle('ativo');
+    btnFecharModal.addEventListener('click', (e) => {
+        modal.classList.add('ativo');
     })
+
     /* Ao clicar fora do modal, ele também fecha o modal */
     modal.addEventListener('click', () => {
         modal.classList.toggle('ativo');
     })
 }
+
