@@ -1,13 +1,15 @@
-export default function outsideClick(element, events, callback) {
+export default function outSideClick(element, events, callback) {
     const html = document.documentElement;
     const outside = 'data-outside';
   
     if(!element.hasAttribute(outside)) {
       events.forEach(userEvent => {
-        html.addEventListener(userEvent, handleOutsideClick);
-      })
+        setTimeout(() => {
+          html.addEventListener(userEvent, handleOutsideClick);}, 100);
+      });
       element.setAttribute(outside, '');
     }
+
     function handleOutsideClick(event) {
       if(!element.contains(event.target)) {
         element.removeAttribute(outside);
